@@ -1,0 +1,381 @@
+<!-- GitHub Pages: set repository to serve from / (root) or /docs folder -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cavas Consulting — AI Consulting for SMBs</title>
+  <meta name="description" content="Benjamin Cavas III brings enterprise AI engineering to small and mid-size businesses. Take the free AI Readiness Scorecard and get a personalized action plan." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cavas Consulting — Enterprise-Scale AI. Human-Scale Implementation." />
+  <meta property="og:description" content="AI consulting for SMBs. Take the free AI Readiness Scorecard to find out where your business stands." />
+  <!-- TODO: Replace with GitHub Pages URL (e.g. https://username.github.io) -->
+  <meta property="og:url" content="[SITE_URL]" />
+  <meta property="og:type" content="website" />
+  <!-- TODO: Add og:image with a 1200x630 branded preview image when available -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" role="banner">
+    <nav class="nav__inner" aria-label="Main navigation">
+      <a href="#" class="nav__logo-link" aria-label="Cavas Consulting home">
+        <img src="./cavas_consulting_logo.png" alt="Cavas Consulting logo" class="nav__logo" height="40" />
+      </a>
+      <!-- TODO: Replace [QUIZ_URL] with deployed Vercel AI Readiness Quiz URL -->
+      <a
+        href="#contact"
+        class="btn btn--pill btn--electric nav__cta"
+        data-quiz-link="true"
+      >
+        <span class="nav__cta-full">Take the Free AI Readiness Quiz</span>
+        <span class="nav__cta-short" aria-hidden="true">Free Quiz</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero" aria-label="Hero">
+      <div class="hero__bg-animation" aria-hidden="true">
+        <span class="orb orb--1"></span>
+        <span class="orb orb--2"></span>
+        <span class="orb orb--3"></span>
+        <span class="orb orb--4"></span>
+        <span class="orb orb--5"></span>
+        <span class="orb orb--6"></span>
+      </div>
+
+      <div class="container hero__inner">
+        <!-- Left column -->
+        <div class="hero__content">
+          <p class="eyebrow animate-load animate-load--1">AI Consulting for Growing Businesses</p>
+          <h1 class="hero__h1 animate-load animate-load--2">
+            Stop hiring<br />for toil.<br />
+            Build your<br />autonomous workforce.
+          </h1>
+          <p class="hero__sub animate-load animate-load--3">
+            Cavas Consulting brings enterprise AI engineering
+            to small and mid-size businesses — without the
+            enterprise price tag or the 18-month timeline.
+          </p>
+          <div class="hero__actions animate-load animate-load--4">
+            <!-- TODO: Replace [QUIZ_URL] with deployed Vercel AI Readiness Quiz URL -->
+            <a
+              href="#contact"
+              class="btn btn--pill btn--electric btn--large"
+              data-quiz-link="true"
+            >
+              Get Your Free AI Readiness Score &rarr;
+            </a>
+            <!-- TODO: Replace [CALENDLY_URL] with Calendly booking page URL -->
+            <a
+              href="#contact"
+              class="hero__ghost-link"
+              data-calendly-link="true"
+            >
+              or book a 30-min discovery call
+            </a>
+          </div>
+        </div>
+
+        <!-- Right column — decorative SVG circuit / neural network -->
+        <div class="hero__illustration animate-load animate-load--5" aria-hidden="true">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="circuit-svg">
+            <!-- Wires — electric -->
+            <g stroke="#0074D9" stroke-width="1.5" fill="none" opacity="0.6">
+              <line x1="60"  y1="120" x2="160" y2="120" />
+              <line x1="160" y1="120" x2="160" y2="200" />
+              <line x1="160" y1="200" x2="240" y2="200" />
+              <line x1="240" y1="200" x2="240" y2="280" />
+              <line x1="240" y1="280" x2="340" y2="280" />
+              <line x1="240" y1="120" x2="340" y2="120" />
+              <line x1="240" y1="120" x2="240" y2="200" />
+              <line x1="60"  y1="200" x2="100" y2="200" />
+              <line x1="100" y1="200" x2="100" y2="280" />
+              <line x1="100" y1="280" x2="160" y2="280" />
+              <line x1="160" y1="280" x2="160" y2="340" />
+              <line x1="60"  y1="340" x2="160" y2="340" />
+              <line x1="340" y1="200" x2="340" y2="280" />
+              <line x1="300" y1="60"  x2="300" y2="120" />
+              <line x1="200" y1="60"  x2="300" y2="60" />
+              <line x1="200" y1="60"  x2="200" y2="120" />
+            </g>
+            <!-- Wires — slate -->
+            <g stroke="#7A8A9A" stroke-width="1" fill="none" opacity="0.4">
+              <line x1="100" y1="120" x2="160" y2="120" />
+              <line x1="100" y1="60"  x2="100" y2="120" />
+              <line x1="60"  y1="60"  x2="100" y2="60" />
+              <line x1="340" y1="340" x2="240" y2="340" />
+              <line x1="240" y1="340" x2="240" y2="280" />
+            </g>
+
+            <!-- Nodes — electric blue -->
+            <g fill="#0074D9">
+              <circle cx="160" cy="120" r="6" />
+              <circle cx="240" cy="120" r="6" />
+              <circle cx="160" cy="200" r="5" />
+              <circle cx="240" cy="200" r="6" />
+              <circle cx="100" cy="200" r="5" />
+              <circle cx="240" cy="280" r="6" />
+              <circle cx="340" cy="120" r="5" />
+              <circle cx="340" cy="280" r="5" />
+              <circle cx="200" cy="60"  r="5" />
+              <circle cx="300" cy="60"  r="5" />
+            </g>
+
+            <!-- Nodes — slate -->
+            <g fill="#7A8A9A">
+              <circle cx="60"  cy="120" r="4" />
+              <circle cx="60"  cy="200" r="4" />
+              <circle cx="60"  cy="340" r="4" />
+              <circle cx="100" cy="280" r="4" />
+              <circle cx="160" cy="280" r="4" />
+              <circle cx="160" cy="340" r="4" />
+              <circle cx="100" cy="60"  r="4" />
+              <circle cx="300" cy="120" r="4" />
+              <circle cx="340" cy="200" r="4" />
+              <circle cx="240" cy="340" r="4" />
+              <circle cx="340" cy="340" r="4" />
+            </g>
+
+            <!-- Pulsing nodes (animated) -->
+            <circle cx="240" cy="200" r="6" fill="#0074D9" class="pulse-node pulse-node--1" />
+            <circle cx="160" cy="120" r="6" fill="#0074D9" class="pulse-node pulse-node--2" />
+            <circle cx="240" cy="280" r="6" fill="#0074D9" class="pulse-node pulse-node--3" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#7A8A9A" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about section" id="about" aria-label="About">
+      <div class="container about__inner">
+        <!-- Left — Founder card -->
+        <div class="about__card-col scroll-reveal scroll-reveal--left">
+          <div class="founder-card">
+            <div class="founder-card__header">
+              <h2 class="founder-card__name">Benjamin Cavas III</h2>
+              <p class="founder-card__title">Founder &amp; Principal AI Consultant</p>
+              <p class="founder-card__location"><span aria-hidden="true">📍</span> Canada</p>
+            </div>
+            <hr class="founder-card__rule" />
+            <div class="founder-card__tags">
+              <span class="tag">Enterprise Engineering Management</span>
+              <span class="tag">Agentic AI Architecture</span>
+              <span class="tag">MCP Server Development</span>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/benjamincavasiii/"
+              class="founder-card__linkedin link--electric"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Connect on LinkedIn &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Right — Bio copy -->
+        <div class="about__bio-col scroll-reveal scroll-reveal--right">
+          <p class="eyebrow">About the Consultant</p>
+          <p class="about__bio">
+            I spent years in enterprise engineering at one of Canada's
+            largest financial institutions, designing systems at a scale
+            most businesses never need — and few can afford.
+          </p>
+          <p class="about__bio">
+            Then I asked a different question: what if a 20-person
+            accounting firm could operate with the same AI infrastructure
+            as a Fortune 500? Not a watered-down version. The real thing,
+            right-sized.
+          </p>
+          <p class="about__bio">
+            That's what Cavas Consulting does. I take the multi-agent
+            architectures, automation frameworks, and AI governance
+            models I built at enterprise scale — and implement them
+            for small and mid-size businesses in weeks, not years.
+          </p>
+          <p class="about__bio">
+            No vendor lock-in. No black boxes. No 200-page strategy
+            decks that gather dust. Just working AI systems your team
+            actually uses.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="services section" id="services" aria-label="Services">
+      <div class="container">
+        <p class="eyebrow eyebrow--light scroll-reveal">What I Do</p>
+        <h2 class="services__heading scroll-reveal">Three ways I can help your business</h2>
+
+        <div class="services__grid">
+
+          <!-- Card 1 — AI Readiness Scorecard (featured) -->
+          <div class="service-card service-card--featured scroll-reveal" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="20" stroke="#0074D9" stroke-width="2"/>
+                <path d="M14 24 Q19 14 24 24 Q29 34 34 24" stroke="#0074D9" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="3" fill="#0074D9"/>
+                <line x1="24" y1="8"  x2="24" y2="12" stroke="#0074D9" stroke-width="2" stroke-linecap="round"/>
+                <line x1="24" y1="36" x2="24" y2="40" stroke="#0074D9" stroke-width="2" stroke-linecap="round"/>
+                <line x1="8"  y1="24" x2="12" y2="24" stroke="#0074D9" stroke-width="2" stroke-linecap="round"/>
+                <line x1="36" y1="24" x2="40" y2="24" stroke="#0074D9" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-card__badge service-card__badge--electric">Free — Start Now</div>
+            <h3 class="service-card__title">AI Readiness Scorecard</h3>
+            <p class="service-card__desc">A free, 15-question assessment that scores your business across five dimensions of AI readiness. Get a personalized report with your score, benchmarks, and your three highest-impact next steps.</p>
+            <!-- TODO: Replace [QUIZ_URL] with deployed Vercel AI Readiness Quiz URL -->
+            <a href="#contact" class="service-card__link link--electric" data-quiz-link="true">
+              Take the Scorecard &rarr;
+            </a>
+          </div>
+
+          <!-- Card 2 — AI Transformation Audit -->
+          <div class="service-card scroll-reveal" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="6" width="28" height="36" rx="2" stroke="#0074D9" stroke-width="2"/>
+                <line x1="14" y1="16" x2="30" y2="16" stroke="#0074D9" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14" y1="22" x2="30" y2="22" stroke="#0074D9" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14" y1="28" x2="22" y2="28" stroke="#0074D9" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="34" cy="34" r="8" stroke="#0074D9" stroke-width="2"/>
+                <line x1="39.5" y1="39.5" x2="44" y2="44" stroke="#0074D9" stroke-width="2.5" stroke-linecap="round"/>
+                <polyline points="30,34 33,37 38,31" stroke="#0074D9" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="service-card__badge service-card__badge--white">From $2,500</div>
+            <h3 class="service-card__title">AI Transformation Audit</h3>
+            <p class="service-card__desc">A fixed-scope, fixed-price engagement delivered in one week. Discovery session, process review, opportunity matrix, and a prioritized 90-day implementation roadmap — all in a branded deliverable.</p>
+            <!-- TODO: Replace [CALENDLY_URL] with Calendly booking page URL -->
+            <a href="#contact" class="service-card__link link--electric" data-calendly-link="true">
+              Book a Discovery Call &rarr;
+            </a>
+          </div>
+
+          <!-- Card 3 — Agentic AI Implementation -->
+          <div class="service-card scroll-reveal" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="10" r="5" stroke="#0074D9" stroke-width="2"/>
+                <circle cx="8"  cy="36" r="5" stroke="#0074D9" stroke-width="2"/>
+                <circle cx="40" cy="36" r="5" stroke="#0074D9" stroke-width="2"/>
+                <circle cx="24" cy="30" r="4" stroke="#0074D9" stroke-width="1.5"/>
+                <line x1="24" y1="15" x2="24" y2="26" stroke="#0074D9" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="12" y1="33" x2="20" y2="30" stroke="#0074D9" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="36" y1="33" x2="28" y2="30" stroke="#0074D9" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="8"  y1="31" x2="20" y2="14" stroke="#7A8A9A" stroke-width="1" opacity="0.6" stroke-linecap="round"/>
+                <line x1="40" y1="31" x2="28" y2="14" stroke="#7A8A9A" stroke-width="1" opacity="0.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-card__badge service-card__badge--muted">Custom Engagement</div>
+            <h3 class="service-card__title">Agentic AI Implementation</h3>
+            <p class="service-card__desc">Custom multi-agent systems built for your specific workflows — from customer service automation to financial operations. Enterprise architecture, SMB price point.</p>
+            <!-- TODO: Replace [CALENDLY_URL] with Calendly booking page URL -->
+            <a href="#contact" class="service-card__link link--electric" data-calendly-link="true">
+              Let's Talk &rarr;
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOCIAL PROOF / NUMBERS ===================== -->
+    <section class="numbers section" id="numbers" aria-label="AI opportunity statistics">
+      <div class="container">
+        <p class="numbers__label">The AI opportunity for SMBs</p>
+        <div class="numbers__grid">
+
+          <div class="stat-block scroll-reveal">
+            <span class="stat-block__number" data-target="75" data-suffix="%">0%</span>
+            <span class="stat-block__label">of SMBs are already experimenting with AI</span>
+          </div>
+
+          <div class="stat-divider" aria-hidden="true"></div>
+
+          <div class="stat-block scroll-reveal">
+            <span class="stat-block__number" data-target="370" data-prefix="$" data-display="3.70">$0</span>
+            <span class="stat-block__label">average return for every $1 invested in AI</span>
+          </div>
+
+          <div class="stat-divider" aria-hidden="true"></div>
+
+          <div class="stat-block scroll-reveal">
+            <span class="stat-block__number" data-target="114" data-suffix=" hrs">0 hrs</span>
+            <span class="stat-block__label">saved per employee annually with AI</span>
+          </div>
+
+          <div class="stat-divider" aria-hidden="true"></div>
+
+          <div class="stat-block scroll-reveal">
+            <span class="stat-block__number" data-target="82" data-suffix="%">0%</span>
+            <span class="stat-block__label">of small businesses still believe AI isn't applicable to them — <strong class="stat-gap">this is the gap</strong></span>
+          </div>
+
+        </div>
+        <p class="numbers__source"><em>Sources: Salesforce, U.S. Chamber of Commerce, McKinsey — 2024/2025 research.</em></p>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FOOTER ===================== -->
+    <section class="cta-footer section" id="contact" aria-label="Call to action">
+      <div class="container cta-footer__inner">
+        <h2 class="cta-footer__heading scroll-reveal">Find out where your business stands.</h2>
+        <p class="cta-footer__sub scroll-reveal">
+          The AI Readiness Scorecard takes 5 minutes and gives you a clear,
+          actionable picture of your business's AI potential.
+        </p>
+        <!-- TODO: Replace [QUIZ_URL] with deployed Vercel AI Readiness Quiz URL -->
+        <a
+          href="#contact"
+          class="btn btn--pill btn--electric btn--large scroll-reveal"
+          data-quiz-link="true"
+        >
+          Take the Free Scorecard &rarr;
+        </a>
+        <p class="cta-footer__reassurance scroll-reveal">No email required to start. No sales call attached.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER BAR ===================== -->
+  <footer class="footer-bar" role="contentinfo">
+    <div class="container footer-bar__inner">
+      <span>&copy; 2025 Cavas Consulting. All rights reserved.</span>
+      <a
+        href="https://www.linkedin.com/in/benjamincavasiii/"
+        class="footer-bar__linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Connect with Benjamin Cavas III on LinkedIn"
+      >
+        LinkedIn &#8599;
+      </a>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
