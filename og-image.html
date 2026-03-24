@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=1200" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -90,7 +90,7 @@
 
     .eyebrow {
       font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
+      font-weight: 700;
       font-size: 15px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -100,7 +100,7 @@
     .headline {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
-      font-size: 52px;
+      font-size: 50px;
       line-height: 1.06;
       letter-spacing: -0.02em;
       color: #ffffff;
@@ -119,29 +119,76 @@
       max-width: 520px;
     }
 
-    .cta-pill {
-      display: inline-flex;
-      align-items: center;
-      background: #0074D9;
-      color: #ffffff;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      padding: 12px 28px;
-      border-radius: 999px;
-      gap: 8px;
-      width: fit-content;
-      letter-spacing: 0.01em;
+    /* Right column */
+    .right {
+      width: 450px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    /* Right column — circuit SVG */
-    .right {
-      width: 320px;
-      flex-shrink: 0;
+    /* Suite Cards */
+    .suite-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(0, 116, 217, 0.25);
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    
+    .suite-card.highlight {
+      background: rgba(0, 116, 217, 0.08);
+      border: 1px solid rgba(0, 116, 217, 0.6);
+    }
+
+    .card-icon {
+      background: #0074D9;
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0.85;
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .suite-card.highlight .card-icon {
+      background: #ffffff;
+      color: #0074D9;
+    }
+
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .card-info h4 {
+      font-family: 'Syne', sans-serif;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .card-info p {
+      font-family: 'JetBrains Mono', monospace;
+      color: #7A8A9A;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .suite-card.highlight .card-info p {
+      color: #0074D9;
     }
 
     /* Bottom bar */
@@ -157,7 +204,7 @@
     }
 
     .bottom-url {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 14px;
       color: #7A8A9A;
       letter-spacing: 0.02em;
@@ -170,17 +217,6 @@
       color: #0074D9;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-    }
-
-    /* Pulse nodes */
-    .pulse-node {
-      animation: nodePulse 2.4s ease-in-out infinite;
-    }
-    .pulse-node-2 { animation-delay: 0.8s; }
-    .pulse-node-3 { animation-delay: 1.6s; }
-    @keyframes nodePulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
     }
   </style>
 </head>
@@ -200,84 +236,49 @@
           <img src="./cavas_consulting_logo.png" alt="Cavas Consulting" class="logo" />
         </div>
         <div class="text-block">
-          <p class="eyebrow">AI Consulting for SMBs</p>
+          <p class="eyebrow">Enterprise Product Suite</p>
           <h1 class="headline">Enterprise-Scale AI.<br /><span>Human-Scale</span><br />Implementation.</h1>
-          <p class="sub">Enterprise AI engineering for small and mid-size businesses — without the enterprise price tag.</p>
-        </div>
-        <div class="cta-pill">
-          Take the Free AI Readiness Scorecard &rarr;
+          <p class="sub">A unified ecosystem of automated readiness assessments, ROI calculators, and agent engineering courses for SMBs.</p>
         </div>
       </div>
 
-      <!-- Right — circuit SVG -->
+      <!-- Right — 4 Projects -->
       <div class="right">
-        <svg viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" width="320" height="400">
-          <!-- Wires electric -->
-          <g stroke="#0074D9" stroke-width="1.5" fill="none" opacity="0.65">
-            <line x1="40"  y1="100" x2="130" y2="100" />
-            <line x1="130" y1="100" x2="130" y2="170" />
-            <line x1="130" y1="170" x2="200" y2="170" />
-            <line x1="200" y1="170" x2="200" y2="240" />
-            <line x1="200" y1="240" x2="290" y2="240" />
-            <line x1="200" y1="100" x2="290" y2="100" />
-            <line x1="200" y1="100" x2="200" y2="170" />
-            <line x1="40"  y1="170" x2="80"  y2="170" />
-            <line x1="80"  y1="170" x2="80"  y2="240" />
-            <line x1="80"  y1="240" x2="130" y2="240" />
-            <line x1="130" y1="240" x2="130" y2="300" />
-            <line x1="40"  y1="300" x2="130" y2="300" />
-            <line x1="290" y1="170" x2="290" y2="240" />
-            <line x1="260" y1="40"  x2="260" y2="100" />
-            <line x1="170" y1="40"  x2="260" y2="40" />
-            <line x1="170" y1="40"  x2="170" y2="100" />
-          </g>
-          <!-- Wires slate -->
-          <g stroke="#7A8A9A" stroke-width="1" fill="none" opacity="0.4">
-            <line x1="80"  y1="100" x2="130" y2="100" />
-            <line x1="80"  y1="40"  x2="80"  y2="100" />
-            <line x1="40"  y1="40"  x2="80"  y2="40" />
-            <line x1="290" y1="300" x2="200" y2="300" />
-            <line x1="200" y1="300" x2="200" y2="240" />
-          </g>
-          <!-- Nodes electric -->
-          <g fill="#0074D9">
-            <circle cx="130" cy="100" r="6" />
-            <circle cx="200" cy="100" r="6" />
-            <circle cx="130" cy="170" r="5" />
-            <circle cx="200" cy="170" r="6" />
-            <circle cx="80"  cy="170" r="5" />
-            <circle cx="200" cy="240" r="6" />
-            <circle cx="290" cy="100" r="5" />
-            <circle cx="290" cy="240" r="5" />
-            <circle cx="170" cy="40"  r="5" />
-            <circle cx="260" cy="40"  r="5" />
-          </g>
-          <!-- Nodes slate -->
-          <g fill="#7A8A9A">
-            <circle cx="40"  cy="100" r="4" />
-            <circle cx="40"  cy="170" r="4" />
-            <circle cx="40"  cy="300" r="4" />
-            <circle cx="80"  cy="240" r="4" />
-            <circle cx="130" cy="240" r="4" />
-            <circle cx="130" cy="300" r="4" />
-            <circle cx="80"  cy="40"  r="4" />
-            <circle cx="260" cy="100" r="4" />
-            <circle cx="290" cy="170" r="4" />
-            <circle cx="200" cy="300" r="4" />
-            <circle cx="290" cy="300" r="4" />
-          </g>
-          <!-- Pulse nodes -->
-          <circle cx="200" cy="170" r="6" fill="#0074D9" class="pulse-node" />
-          <circle cx="130" cy="100" r="6" fill="#0074D9" class="pulse-node pulse-node-2" />
-          <circle cx="200" cy="240" r="6" fill="#0074D9" class="pulse-node pulse-node-3" />
-        </svg>
+        <div class="suite-card highlight">
+          <div class="card-icon">01</div>
+          <div class="card-info">
+            <h4>Consulting Profile</h4>
+            <p>cavas.consulting</p>
+          </div>
+        </div>
+        <div class="suite-card">
+          <div class="card-icon">02</div>
+          <div class="card-info">
+            <h4>AI Readiness Scorecard</h4>
+            <p>scorecard.cavas.consulting</p>
+          </div>
+        </div>
+        <div class="suite-card">
+          <div class="card-icon">03</div>
+          <div class="card-info">
+            <h4>ROI Calculator</h4>
+            <p>calculator.cavas.consulting</p>
+          </div>
+        </div>
+        <div class="suite-card">
+          <div class="card-icon">04</div>
+          <div class="card-info">
+            <h4>5-Day Email Course</h4>
+            <p>emailcourse.cavas.consulting</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Bottom bar -->
     <div class="bottom-bar">
-      <span class="bottom-url">bcavas.github.io/cavas-consulting-home</span>
-      <span class="bottom-tagline">Cavas Consulting</span>
+      <span class="bottom-url">https://cavas.consulting</span>
+      <span class="bottom-tagline">Cavas Consulting Ecosystem</span>
     </div>
   </div>
 </body>
