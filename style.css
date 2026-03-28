@@ -646,10 +646,30 @@ a {
 }
 
 /* ============================================================
+   PROOF & READINESS
+   ============================================================ */
+.proof-readiness {
+  background-color: var(--off-white);
+}
+
+.proof-readiness__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+.proof-readiness__block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ============================================================
    NUMBERS / SOCIAL PROOF
    ============================================================ */
 .numbers {
-  background-color: var(--off-white);
+  background-color: var(--navy);
 }
 
 .numbers__label {
@@ -658,7 +678,7 @@ a {
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--slate);
+  color: var(--electric);
   text-align: center;
   margin-bottom: 52px;
 }
@@ -701,7 +721,7 @@ a {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-size: clamp(13px, 1.2vw, 15px);
-  color: var(--dark-text);
+  color: var(--slate-light);
   line-height: 1.5;
   max-width: 180px;
   display: block;
@@ -716,7 +736,7 @@ a {
   text-align: center;
   margin-top: 52px;
   font-size: 13px;
-  color: var(--slate);
+  color: var(--slate-light);
   font-style: italic;
   font-family: 'DM Sans', sans-serif;
 }
@@ -725,7 +745,7 @@ a {
    CTA FOOTER SECTION
    ============================================================ */
 .cta-footer {
-  background-color: var(--navy);
+  background-color: var(--off-white);
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -742,7 +762,7 @@ a {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
   font-size: clamp(36px, 4.5vw, 52px);
-  color: var(--white);
+  color: var(--navy);
   line-height: 1.1;
   letter-spacing: -0.02em;
   max-width: 700px;
@@ -752,14 +772,14 @@ a {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   font-size: 18px;
-  color: var(--slate-light);
+  color: var(--dark-text);
   line-height: 1.65;
   max-width: 600px;
 }
 
 .cta-footer__reassurance {
   font-size: 14px;
-  color: var(--slate-light);
+  color: var(--slate);
   font-weight: 400;
 }
 
@@ -856,6 +876,10 @@ a {
     grid-template-columns: 1fr 1fr;
   }
 
+  .proof-readiness__inner {
+    gap: 60px;
+  }
+
   .numbers__grid {
     flex-wrap: wrap;
     gap: 40px;
@@ -896,6 +920,11 @@ a {
   }
 
   .about__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .proof-readiness__inner {
     grid-template-columns: 1fr;
     gap: 40px;
   }
