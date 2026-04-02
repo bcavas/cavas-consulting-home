@@ -50,7 +50,7 @@
   }
 
   function fadeInStat(el, value, delay = 400) {
-    el.textContent = value;
+    el.innerHTML = value;
     el.style.opacity = '0';
     el.style.transition = `opacity 0.8s ease ${delay}ms`;
     setTimeout(() => { el.style.opacity = '1'; }, 50);
