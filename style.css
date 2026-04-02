@@ -188,10 +188,6 @@ a {
 .nav__logo {
   height: 40px;
   width: auto;
-  /* Logo has white background — white bg box on dark nav */
-  background-color: var(--white);
-  border-radius: 4px;
-  padding: 3px 6px;
 }
 
 .nav__cta {
@@ -803,9 +799,6 @@ a {
 .site-footer__logo {
   height: 32px;
   width: auto;
-  background-color: var(--white);
-  border-radius: 4px;
-  padding: 3px 6px;
   margin-bottom: 12px;
 }
 
