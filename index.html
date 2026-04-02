@@ -23,6 +23,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="./style.css" />
+  <style>
+    @media (max-width: 768px) {
+      .services__grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
 </head>
 <body>
 
@@ -57,13 +62,13 @@
           </h1>
           <p class="hero__sub animate-load animate-load--3">
             I build the same agentic systems that power global financial institutions —
-            scaled to fit a 5–50 person team, priced to match.
+            scaled to fit a 5–200 person team, priced to match.
             No corporate price tag. No 18-month timelines. Just stable, working automation
             built around how your business actually operates.
           </p>
           <div class="hero__actions animate-load animate-load--4">
             <a
-              href="https://calendly.com/cavas-consulting/30min"
+              href="https://calendly.com/cavas_consulting-discovery/30min"
               class="btn btn--pill btn--electric btn--large"
               target="_blank"
               rel="noopener noreferrer"
@@ -208,9 +213,9 @@
     <section class="services section" id="services" aria-label="Services">
       <div class="container">
         <p class="eyebrow eyebrow--light scroll-reveal">What I Do</p>
-        <h2 class="services__heading scroll-reveal">Two ways I can help your business</h2>
+        <h2 class="services__heading scroll-reveal">Four ways I can help your business</h2>
 
-        <div class="services__grid">
+        <div class="services__grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
 
           <!-- Card 1 — AI Transformation Audit -->
           <div class="service-card scroll-reveal" tabindex="0">
@@ -228,12 +233,30 @@
             <div class="service-card__badge service-card__badge--white">From $2,500</div>
             <h3 class="service-card__title">AI Transformation Audit</h3>
             <p class="service-card__desc">A fixed-scope, fixed-price engagement delivered in five business days. Discovery session, process review, opportunity matrix, and a prioritised 90-day implementation roadmap — all in a branded deliverable you can act on the week you receive it.</p>
-            <a href="https://calendly.com/cavas-consulting/30min" class="service-card__link link--electric" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendly.com/cavas_consulting-discovery/30min" class="service-card__link link--electric" target="_blank" rel="noopener noreferrer">
               Book a Discovery Call &rarr;
             </a>
           </div>
 
-          <!-- Card 3 — Agentic AI Implementation -->
+          <!-- Card 2 — AI Strategy Session -->
+          <div class="service-card scroll-reveal" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 14H40V36C40 37.1 39.1 38 38 38H10C8.9 38 8 37.1 8 36V14Z" stroke="#0074D9" stroke-width="2" fill="none"/>
+                <path d="M14 14V10C14 8.9 14.9 8 16 8H32C33.1 8 34 8.9 34 10V14" stroke="#0074D9" stroke-width="2" fill="none"/>
+                <line x1="20" y1="24" x2="28" y2="24" stroke="#0074D9" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="20" y1="30" x2="28" y2="30" stroke="#0074D9" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-card__badge service-card__badge--white">$997</div>
+            <h3 class="service-card__title">AI Strategy Session</h3>
+            <p class="service-card__desc">A 90-minute focused consulting session on one specific business process, with a written summary of findings and recommendations delivered within 24 hours. The right starting point if you have a bounded question rather than a broad process review.</p>
+            <a href="https://calendly.com/cavas_consulting-discovery/30min" class="service-card__link link--electric" target="_blank" rel="noopener noreferrer">
+              Book a Discovery Call &rarr;
+            </a>
+          </div>
+
+          <!-- Card 3 — Implementation Project -->
           <div class="service-card scroll-reveal" tabindex="0">
             <div class="service-card__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -248,11 +271,29 @@
                 <line x1="40" y1="31" x2="28" y2="14" stroke="#7A8A9A" stroke-width="1" opacity="0.6" stroke-linecap="round"/>
               </svg>
             </div>
-            <div class="service-card__badge service-card__badge--muted">Custom Engagement</div>
-            <h3 class="service-card__title">Agentic AI Implementation</h3>
-            <p class="service-card__desc">Custom multi-agent systems built for your specific workflows — from customer service automation to financial operations. Enterprise architecture, SMB price point.</p>
-            <a href="https://calendly.com/cavas-consulting/30min" class="service-card__link link--electric" target="_blank" rel="noopener noreferrer">
-              Let's Talk &rarr;
+            <div class="service-card__badge service-card__badge--white">From $7,000</div>
+            <h3 class="service-card__title">Implementation Project</h3>
+            <p class="service-card__desc">Custom agentic systems built for your specific workflows — from customer service automation to document processing and financial operations. Delivered with full technical documentation and a 30-day post-launch monitoring period. Enterprise architecture, SMB price point.</p>
+            <a href="https://calendly.com/cavas_consulting-discovery/30min" class="service-card__link link--electric" target="_blank" rel="noopener noreferrer">
+              Book a Discovery Call &rarr;
+            </a>
+          </div>
+
+          <!-- Card 4 — Advisory Retainer -->
+          <div class="service-card scroll-reveal" tabindex="0">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 8H36C37.1 8 38 8.9 38 10V38C38 39.1 37.1 40 36 40H12C10.9 40 10 39.1 10 38V10C10 8.9 10.9 8 12 8Z" stroke="#0074D9" stroke-width="2" fill="none"/>
+                <line x1="14" y1="16" x2="34" y2="16" stroke="#0074D9" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14" y1="24" x2="34" y2="24" stroke="#0074D9" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14" y1="32" x2="28" y2="32" stroke="#0074D9" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-card__badge service-card__badge--white">$1,500–$2,500 / month</div>
+            <h3 class="service-card__title">Advisory Retainer</h3>
+            <p class="service-card__desc">Ongoing optimisation, async support, and strategic guidance for clients who have completed an implementation. Monthly standing calls, quarterly strategy reviews, and a dedicated channel for questions. Month-to-month — no lock-in.</p>
+            <a href="https://calendly.com/cavas_consulting-discovery/30min" class="service-card__link link--electric" target="_blank" rel="noopener noreferrer">
+              Book a Discovery Call &rarr;
             </a>
           </div>
 
@@ -266,65 +307,65 @@
         <div class="proof-readiness__block">
           <h3 style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px; color: var(--navy); margin-bottom: 16px; line-height: 1.2;">The Results</h3>
           <p style="font-size: clamp(15px, 1.4vw, 17px); font-weight: 400; line-height: 1.7; color: var(--dark-text);">
-            Our AI Transformation Audits cover 2–3 business processes and deliver a prioritised roadmap in one week. Clients who implement the top recommendation recover an average of 8–12 hours per employee per week across customer service, accounts payable, and document processing.
+            Our AI Transformation Audits cover 2–3 business processes and deliver a prioritised roadmap in one week. Clients who implement the top recommendation typically recover 5–10 hours per employee per week across customer service, accounts payable, and document processing workflows.
           </p>
           <p style="font-size: 12px; color: var(--slate); font-style: italic; margin-top: 12px;">
-            Based on: Brynjolfsson, Li &amp; Raymond (NBER 2025); Thomson Reuters Future of Professionals (2024–25); APQC Invoice Processing Benchmarks (2023–24).
+            Based on: Brynjolfsson, Li &amp; Raymond (NBER Working Paper 31161, 2023); business.com / Dialog, 2026 SMB AI Outlook (n=1,009); APQC Invoice Processing Benchmarks (2023–24).
           </p>
         </div>
         <div class="proof-readiness__block">
           <h3 style="font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px; color: var(--navy); margin-bottom: 16px; line-height: 1.2;">Get Your Baseline</h3>
           <p style="font-size: clamp(15px, 1.4vw, 17px); font-weight: 400; line-height: 1.7; color: var(--dark-text);">
-            Take the free 5-minute <a href="https://scorecard.cavas.consulting/" class="link--electric">AI Readiness Scorecard</a> before your discovery call. Fifteen quick questions give you a clear picture of where your business stands and what's possible.
+            We recommend taking the free 5-minute <a href="https://scorecard.cavas.consulting/" class="link--electric">AI Readiness Scorecard</a> before your discovery call. Fifteen quick questions establish where you stand — giving me the context to focus our conversation on what matters most for your business.
           </p>
         </div>
       </div>
     </section>
 
     <!-- ===================== SOCIAL PROOF / NUMBERS ===================== -->
-    <section class="numbers section" id="numbers" aria-label="AI opportunity statistics">
+    <section class="numbers section" id="numbers" aria-label="AI opportunity statistics" data-stats-section>
       <div class="container">
         <p class="numbers__label">The AI opportunity for SMBs</p>
         <div class="numbers__grid">
 
           <div class="stat-block scroll-reveal">
-            <span class="stat-block__number" data-target="75" data-suffix="%">0%</span>
+            <span class="stat-block__number" id="stat-adoption" data-target="75" data-suffix="%">75%<sup>1</sup></span>
             <span class="stat-block__label">of SMBs are already experimenting with AI</span>
           </div>
 
           <div class="stat-divider" aria-hidden="true"></div>
 
           <div class="stat-block scroll-reveal">
-            <span class="stat-block__number" data-target="370" data-prefix="$" data-display="3.70">$0</span>
-            <span class="stat-block__label">average return for every $1 invested in AI</span>
+            <span class="stat-block__number" id="stat-roi" data-static="$3.70">$3.70<sup>2</sup></span>
+            <span class="stat-block__label">average return for every $1 invested in AI — for businesses with mature implementations</span>
           </div>
 
           <div class="stat-divider" aria-hidden="true"></div>
 
           <div class="stat-block scroll-reveal">
-            <span class="stat-block__number" data-target="114" data-suffix=" hrs">0 hrs</span>
-            <span class="stat-block__label">saved per employee annually with AI</span>
+            <span class="stat-block__number" id="stat-hours" data-target="290" data-suffix=" hrs">290 hrs<sup>3</sup></span>
+            <span class="stat-block__label">saved per employee per year with AI tools</span>
           </div>
 
           <div class="stat-divider" aria-hidden="true"></div>
 
           <div class="stat-block scroll-reveal">
-            <span class="stat-block__number" data-target="82" data-suffix="%">0%</span>
-            <span class="stat-block__label">of small businesses still believe AI isn't applicable to them — <strong class="stat-gap">this is the gap</strong></span>
+            <span class="stat-block__number" id="stat-gap" data-static="~20%">~20%<sup>4</sup></span>
+            <span class="stat-block__label">of SMBs have no current plans to adopt AI — <strong class="stat-gap">this is the gap</strong></span>
           </div>
 
         </div>
-        <p class="numbers__source"><em>Sources: Salesforce, U.S. Chamber of Commerce, McKinsey — 2024/2025 research.</em></p>
+        <p class="numbers__source"><em><sup>1</sup> Salesforce SMB Trends Report, 2025 (n=3,350). &nbsp; <sup>2</sup> IDC White Paper commissioned by Microsoft, November 2024. &nbsp; <sup>3</sup> business.com / Dialog, 2026 SMB AI Outlook (n=1,009; 5.6 hrs/wk × 52). &nbsp; <sup>4</sup> GTIA SMB Technology &amp; Buying Trends, 2025 (n=720).</em></p>
       </div>
     </section>
 
     <!-- ===================== CTA FOOTER ===================== -->
     <section class="cta-footer section" id="contact" aria-label="Call to action">
       <div class="container cta-footer__inner">
-        <h2 class="cta-footer__heading scroll-reveal">Find out where your business stands.</h2>
+        <h2 class="cta-footer__heading scroll-reveal">Ready to move forward?</h2>
         <p class="cta-footer__sub scroll-reveal">
-          The AI Readiness Scorecard takes 5 minutes and gives you a clear,
-          actionable picture of your business's AI potential.
+          Complete the 5-minute AI Readiness Scorecard to establish your baseline,
+          then book a discovery call — I'll use your scorecard results to focus on what's most relevant for your business.
         </p>
         <a
           href="https://scorecard.cavas.consulting/"
@@ -332,9 +373,9 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Take the Free Scorecard &rarr;
+          Start with the Scorecard &rarr;
         </a>
-        <p class="cta-footer__reassurance scroll-reveal">No email required to start. No sales call attached.</p>
+        <p class="cta-footer__reassurance scroll-reveal">5 minutes. No email required.</p>
       </div>
     </section>
 
@@ -361,7 +402,8 @@
           <ul class="site-footer__links">
             <li><a href="https://cavas.consulting">About</a></li>
             <li><a href="https://www.linkedin.com/in/benjamincavasiii/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://calendly.com/cavas-consulting/30min" target="_blank" rel="noopener noreferrer">Book a Strategy Call</a></li>
+            <li><a href="https://scorecard.cavas.consulting">Free AI Readiness Scorecard</a></li>
+            <li><a href="https://calendly.com/cavas_consulting-discovery/30min" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a></li>
           </ul>
         </div>
 

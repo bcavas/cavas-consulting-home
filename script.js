@@ -28,64 +28,63 @@
   /* ----------------------------------------------------------
      STAT COUNTER — count-up animation on scroll
   ---------------------------------------------------------- */
-  const statBlocks = document.querySelectorAll('.stat-block__number[data-target]');
-
   const easeOut = (t) => 1 - Math.pow(1 - t, 3);
 
-  function animateCounter(el) {
-    const rawTarget = parseFloat(el.dataset.target);
-    const prefix = el.dataset.prefix || '';
-    const suffix = el.dataset.suffix || '';
-    const displayValue = el.dataset.display || null;  // e.g. "3.70" for $3.70
-    const duration = 1600; // ms
-    const startTime = performance.now();
-
-    function tick(now) {
-      const elapsed = now - startTime;
+  function animateCounter(el, target, duration = 1800, suffix = '') {
+    const start = performance.now();
+    function step(timestamp) {
+      const elapsed = timestamp - start;
       const progress = Math.min(elapsed / duration, 1);
       const eased = easeOut(progress);
-      const current = rawTarget * eased;
-
-      if (displayValue !== null) {
-        // Use proportional display value
-        const displayTarget = parseFloat(displayValue);
-        el.textContent = prefix + (displayTarget * eased).toFixed(2) + suffix;
-      } else if (Number.isInteger(rawTarget)) {
-        el.textContent = prefix + Math.round(current) + suffix;
-      } else {
-        el.textContent = prefix + current.toFixed(2) + suffix;
-      }
-
-      if (progress < 1) {
-        requestAnimationFrame(tick);
-      } else {
-        // Final value
-        if (displayValue !== null) {
-          el.textContent = prefix + displayValue + suffix;
-        } else {
-          el.textContent = prefix + rawTarget + suffix;
-        }
+      const displayHtml = Math.floor(eased * target) + suffix;
+      // Preserve superscript markup
+      const superscript = el.innerHTML.match(/<sup>.*?<\/sup>/);
+      el.innerHTML = displayHtml + (superscript ? superscript[0] : '');
+      if (progress < 1) requestAnimationFrame(step);
+      else {
+        const finalHtml = target + suffix + (superscript ? superscript[0] : '');
+        el.innerHTML = finalHtml;
       }
     }
-
-    requestAnimationFrame(tick);
+    requestAnimationFrame(step);
   }
 
-  const counterObserver = new IntersectionObserver(
+  function fadeInStat(el, value, delay = 400) {
+    el.textContent = value;
+    el.style.opacity = '0';
+    el.style.transition = `opacity 0.8s ease ${delay}ms`;
+    setTimeout(() => { el.style.opacity = '1'; }, 50);
+  }
+
+  const statSection = document.querySelector('[data-stats-section]');
+  const statObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          counterObserver.unobserve(entry.target);
+          // Stat 1: 75%
+          const stat1 = document.getElementById('stat-adoption');
+          if (stat1) animateCounter(stat1, 75, 1800, '%');
+
+          // Stat 2: $3.70 (static fade)
+          const stat2 = document.getElementById('stat-roi');
+          if (stat2) fadeInStat(stat2, '$3.70<sup>2</sup>', 400);
+
+          // Stat 3: 290 hrs
+          const stat3 = document.getElementById('stat-hours');
+          if (stat3) animateCounter(stat3, 290, 2000, ' hrs');
+
+          // Stat 4: ~20% (static fade)
+          const stat4 = document.getElementById('stat-gap');
+          if (stat4) fadeInStat(stat4, '~20%<sup>4</sup>', 600);
+
+          statObserver.unobserve(entry.target);
         }
       });
     },
     { threshold: 0.5 }
   );
 
-  statBlocks.forEach((el) => {
-    counterObserver.observe(el);
-  });
+  if (statSection) statObserver.observe(statSection);
 
   /* ----------------------------------------------------------
      STAGGERED SERVICE CARDS
